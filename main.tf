@@ -26,6 +26,7 @@ module "blog_vpc" {
 
   enable_nat_gateway = true
 
+
   tags = {
     Terraform = "true"
     Environment = var.environment.name
