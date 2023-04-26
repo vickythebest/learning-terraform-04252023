@@ -17,16 +17,16 @@ variable "ami_filter"{
   }
 }
 
-variable "environment"{
-  description ="Development environment"
+variable "environment" {
+  description = "Development environment"
 
   type = object({
-    name=string
-    network_prefix=string
+    name           = string
+    network_prefix = string
   })
 
-  default={
-    name = "dev"
+  default = {
+    name           = "dev"
     network_prefix = "10.0"
   }
 }
