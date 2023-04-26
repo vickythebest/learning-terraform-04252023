@@ -34,7 +34,7 @@ module "blog_sg" {
   version = "4.17.2"
   name = "blog"
   
-  security_group_id = aws_security_group.blog_sg.id 
+  vpc_id = data.aws.vpc.default.id
   
   ingress_rules =["http-80-tcp","https-443-tcp"]
   ingress_cidr_blocks=["0.0.0.0/0"]
